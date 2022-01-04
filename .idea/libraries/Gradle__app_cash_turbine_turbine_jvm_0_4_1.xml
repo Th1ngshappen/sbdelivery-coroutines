@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: app.cash.turbine:turbine-jvm:0.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/app.cash.turbine/turbine-jvm/0.4.1/7cfb140a0f8a6bff8f377d1973576b5b72e1fb07/turbine-jvm-0.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/app.cash.turbine/turbine-jvm/0.4.1/1862e6c639e18da53e2ccadd494fcad91f6d60ba/turbine-jvm-0.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/app.cash.turbine/turbine-jvm/0.4.1/963a3ac5a8d9908ae8404d319df491b105b798f8/turbine-jvm-0.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
