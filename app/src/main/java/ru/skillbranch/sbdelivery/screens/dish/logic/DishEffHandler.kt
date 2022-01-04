@@ -1,22 +1,19 @@
 package ru.skillbranch.sbdelivery.screens.dish.logic
 
-import android.util.Log
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import ru.skillbranch.sbdelivery.repository.DishRepository
 import ru.skillbranch.sbdelivery.screens.root.logic.Eff
-import ru.skillbranch.sbdelivery.screens.root.logic.IEffHandler
+import ru.skillbranch.sbdelivery.screens.root.logic.IEffectHandler
 import ru.skillbranch.sbdelivery.screens.root.logic.Msg
-import java.lang.IllegalStateException
 import javax.inject.Inject
-import kotlin.coroutines.coroutineContext
 
 class DishEffHandler @Inject constructor(
     private val repository: DishRepository,
     private val notifyChannel: Channel<Eff.Notification>,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default
 ) :
-    IEffHandler<DishFeature.Eff, Msg> {
+    IEffectHandler<DishFeature.Eff, Msg> {
 
     private var localJob: Job? = null
 

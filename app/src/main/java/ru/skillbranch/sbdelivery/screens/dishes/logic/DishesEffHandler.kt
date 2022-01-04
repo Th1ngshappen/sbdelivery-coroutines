@@ -3,10 +3,9 @@ package ru.skillbranch.sbdelivery.screens.dishes.logic
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.delay
 import ru.skillbranch.sbdelivery.repository.DishesRepository
 import ru.skillbranch.sbdelivery.screens.root.logic.Eff
-import ru.skillbranch.sbdelivery.screens.root.logic.IEffHandler
+import ru.skillbranch.sbdelivery.screens.root.logic.IEffectHandler
 import ru.skillbranch.sbdelivery.screens.root.logic.Msg
 import javax.inject.Inject
 
@@ -14,7 +13,7 @@ class DishesEffHandler @Inject constructor(
     private val repository: DishesRepository,
     private val notifyChannel: Channel<Eff.Notification>,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default
-) : IEffHandler<DishesFeature.Eff, Msg> {
+) : IEffectHandler<DishesFeature.Eff, Msg> {
     override suspend fun handle(effect: DishesFeature.Eff, commit: (Msg) -> Unit) {
         when (effect) {
             is DishesFeature.Eff.AddToCart -> {

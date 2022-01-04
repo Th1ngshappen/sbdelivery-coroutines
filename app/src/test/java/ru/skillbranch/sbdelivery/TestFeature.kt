@@ -6,7 +6,7 @@ import ru.skillbranch.sbdelivery.screens.cart.logic.CartFeature
 import ru.skillbranch.sbdelivery.screens.dish.logic.DishFeature
 import ru.skillbranch.sbdelivery.screens.dishes.logic.DishesFeature
 import ru.skillbranch.sbdelivery.screens.root.logic.Eff
-import ru.skillbranch.sbdelivery.screens.root.logic.IEffHandler
+import ru.skillbranch.sbdelivery.screens.root.logic.IEffectHandler
 import ru.skillbranch.sbdelivery.screens.root.logic.Msg
 import java.lang.IllegalStateException
 
@@ -28,7 +28,7 @@ class TestFeature<S, M, E>(
 
     fun listenLocal(
         scope: CoroutineScope,
-        handler: IEffHandler<E, Msg>
+        handler: IEffectHandler<E, Msg>
     ) {
         _scope = scope
         _job = _scope.launch(Dispatchers.Main) {
